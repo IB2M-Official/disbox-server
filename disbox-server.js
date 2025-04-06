@@ -7,9 +7,7 @@ const disboxFile = require('./disbox-file');
 
 const app = express();
 const port = process.env.PORT || 8080;
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
-});
+
 
 app.use(cors())
 app.use(bodyParser.json())
@@ -55,6 +53,6 @@ app.delete('/files/delete/:userId/:id', (req, res) => {
 });
 
 
-app.listen(process.env.PORT, () => {
-  console.log(`Example app listening on port ${process.env.PORT}`)
-})
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
